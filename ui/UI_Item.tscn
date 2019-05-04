@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://ui/UI_Item.gd" type="Script" id=1]
+[ext_resource path="res://sprite/item/windball.png" type="Texture" id=2]
+[ext_resource path="res://sprite/item/sword.png" type="Texture" id=3]
+[ext_resource path="res://sprite/item/wing.png" type="Texture" id=4]
+
+[node name="item" type="Control"]
+margin_left = 930.861
+margin_top = -37.3369
+margin_right = 970.861
+margin_bottom = 2.66305
+script = ExtResource( 1 )
+
+[node name="ball" type="TextureRect" parent="."]
+visible = false
+margin_left = 84.7142
+margin_top = 50.3374
+margin_right = 148.714
+margin_bottom = 114.337
+texture = ExtResource( 2 )
+expand = true
+
+[node name="sword" type="TextureRect" parent="."]
+visible = false
+margin_left = 165.452
+margin_top = 50.3374
+margin_right = 229.452
+margin_bottom = 114.337
+texture = ExtResource( 3 )
+expand = true
+
+[node name="wing" type="TextureRect" parent="."]
+visible = false
+margin_left = 248.645
+margin_top = 48.2938
+margin_right = 312.645
+margin_bottom = 112.294
+texture = ExtResource( 4 )
+expand = true

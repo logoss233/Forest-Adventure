@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ui/UI_Life.gd" type="Script" id=1]
+[ext_resource path="res://sprite/item/heart.png" type="Texture" id=2]
+
+[node name="life" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+
+[node name="1" type="TextureRect" parent="."]
+margin_left = 98.4517
+margin_top = -4.26525
+margin_right = 162.452
+margin_bottom = 59.7347
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="2" type="TextureRect" parent="."]
+margin_left = 143.035
+margin_top = -4.26525
+margin_right = 207.035
+margin_bottom = 59.7347
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="3" type="TextureRect" parent="."]
+margin_left = 188.476
+margin_top = -4.26525
+margin_right = 252.476
+margin_bottom = 59.7347
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="4" type="TextureRect" parent="."]
+margin_left = 233.06
+margin_top = -4.26525
+margin_right = 297.06
+margin_bottom = 59.7347
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="5" type="TextureRect" parent="."]
+margin_left = 278.501
+margin_top = -4.26525
+margin_right = 342.501
+margin_bottom = 59.7347
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 2 )
+expand = true

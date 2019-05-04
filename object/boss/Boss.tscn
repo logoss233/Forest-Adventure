@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://object/boss/Boss.gd" type="Script" id=1]
+[ext_resource path="res://sprite/boss/boss.png" type="Texture" id=2]
+[ext_resource path="res://sprite/boss/boss_ball.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 66.842, 91.7615 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "beHit"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("boss_ball:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Boss" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ],
+"_edit_vertical_guides_": [  ]
+}
+
+[node name="sprite" type="Sprite" parent="."]
+position = Vector2( 72.5156, 1205.6 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 2 )
+
+[node name="boss_ball" type="Sprite" parent="."]
+position = Vector2( 23.1926, -44.4265 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 3 )
+
+[node name="hitArea" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitArea"]
+position = Vector2( 24.3437, -30.0716 )
+shape = SubResource( 1 )
+
+[node name="damageArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="damageArea"]
+position = Vector2( 24.3437, -30.0716 )
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/beHit = SubResource( 2 )
